@@ -6,5 +6,9 @@
 
 > Passos:
 
+>> Aula 2
 	* Criação do composer.json
-	* Definir Namespace com psr-4
+	* Definir Vendoname com psr-4 (nome-fornecedor/nome-pacote)
+	
+>> Aula 3
+	* 
