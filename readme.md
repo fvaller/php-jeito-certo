@@ -9,6 +9,7 @@
 >> Aula 2
 	* Criação do composer.json
 	* Definir Vendoname com psr-4 (nome-fornecedor/nome-pacote)
-	
 >> Aula 3
-	* 
+	* Criação do Router	
+>> Aula 4
+	* Criação do RouterColletion
