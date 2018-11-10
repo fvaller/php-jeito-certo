@@ -14,7 +14,7 @@ class Resolver
         $parameters = $info->getParameters();
         $parameters = $this->resolverParameters($parameters);
 
-        return call_user_func_array($info->getClosure(), $parameters);        
+        return call_user_func_array($info->getClosure(), $parameters);
     }
 
     public function class($class, array $dependencies = [])
@@ -23,8 +23,8 @@ class Resolver
 
         $class = new \ReflectionClass($class);
 
-        if (!$class->isInstantiable()){
-            throw new \Exception("{$class} is not instantiable");            
+        if (!$class->isInstantiable()) {
+            throw new \Exception("{$class} is not instantiable");
         }
 
         $constructor = $class->getConstructor();
@@ -47,8 +47,7 @@ class Resolver
         foreach ($parameters as $parameter) {
             $dependency = $parameter->getClass();
 
-
-            if($dependency){
+            if ($dependency) {
                 $dependencies[] = $this->class($dependency->name, $this->dependencies);
             } else {
                 $dependencies[] = $this->getDependencies($parameter);
@@ -59,16 +58,14 @@ class Resolver
 
     public function getDependencies($parameter)
     {
-        if (isset($this->dependencies[$parameter->name])){
+        if (isset($this->dependencies[$parameter->name])) {
             return $this->dependencies[$parameter->name];
         }
 
-        if ($parameter->isDefaultValueAvailable()){
+        if ($parameter->isDefaultValueAvailable()) {
             return $parameter->getDefaultValue();
         }
 
         throw new \Exception("{parameter->name} not receive a valid value");
-        
     }
-    
 }

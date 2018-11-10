@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Renderer;
 
 interface PHPRendererInterface

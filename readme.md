@@ -29,3 +29,6 @@
 >> Aula 10
 	* Criação da camada de rederização
 	* Usando Interface para renderizar;
+>> Aula 11
+	* Criar um class App
+	* Finaliza o curso	
