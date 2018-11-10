@@ -20,4 +20,7 @@
     * Usando o vendor/bin/phpcs src --standard=PSR2 para verificar erros
     * Usando O vendor\bin\phpcbf.bat src --standard=PSR2 para corrigir 
 >> Aula 7
-	* Criando methods da class Router
+    * Criando methods da class Router
+>> Aula 8
+	* Criação de rotas dinamicas com parametros
+    * Rotas com regex
