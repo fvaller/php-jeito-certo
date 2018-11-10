@@ -2,4 +2,9 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-new App\Router\Router;
+$router = new App\Router\Router;
+
+$router->get('/hello', function(){
+    return 'ola mundo!';
+});
+
