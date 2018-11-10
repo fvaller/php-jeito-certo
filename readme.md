@@ -15,3 +15,7 @@
 	* Criação do RouterColletion
 >> Aula 5
 	* Uso da PSR-2 - Estilo de Codificação
+>> Aula 6
+	* Instalando dependencias
+    * Usando o vendor/bin/phpcs src --standard=PSR2 para verificar erros
+	* Usando O vendor\bin\phpcbf.bat src --standard=PSR2 para corrigir 
