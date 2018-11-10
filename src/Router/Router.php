@@ -2,9 +2,11 @@
 
 namespace App\Router;
 
-class Router {
+class Router 
+{
     
-    public function __construct(){
-        echo 'Esta funcionando';
+    public function __construct()
+    {
+		echo 'Esta funcionando';
     }
 }

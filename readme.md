@@ -13,3 +13,5 @@
 	* Criação do Router	
 >> Aula 4
 	* Criação do RouterColletion
+>> Aula 5
+	* Uso da PSR-2 - Estilo de Codificação
