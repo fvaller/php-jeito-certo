@@ -2,16 +2,29 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
+use App\Router\Router;
+use App\DI\Resolver;
+
 $path_info = $_SERVER['PATH_INFO'] ?? '/';
 $request_method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
 
-$router = new App\Router\Router($path_info, $request_method);
+$router = new Router($path_info, $request_method);
 
-$router->get('/hello/{id}', function($params){
-    return 'Bem vindo ' . $params[1];
-});
+class User
+{
+    public function __construct($name = 'User class')
+    {
+        echo $name;
+    }
+}
+
+require __DIR__ . '/router.php';
 
 $result = $router->run();
 
-var_dump($result['callback']($result['params']));
+$data = (new Resolver)->method($result['callback'], [
+    'params' => $result['params']
+]);
+
+var_dump($data);
 

@@ -24,3 +24,5 @@
 >> Aula 8
 	* Criação de rotas dinamicas com parametros
     * Rotas com regex
+>> Aula 9
+	* Resolvendo dependencias das class de forma automatica	    
